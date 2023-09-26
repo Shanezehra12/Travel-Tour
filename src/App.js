@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+/* import "./styles.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Service from "./routes/Service";
+import Contact from "./routes/Contact";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Your Code Here</h1>
     </div>
   );
-}
+} */
+
+import "./styles.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Homepage from "./routes/Homepage";
+import Aboutpage from "./routes/Aboutpage";
+import Servicepage from "./routes/Servicepage";
+import Contactpage from "./routes/Contactpage";
+import SignUppage from "./routes/SignUppage";
+
+const App = () => {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="/about" element={<Aboutpage/>}/>
+        <Route path="/service" element={<Servicepage/>}/>
+        <Route path="/contact" element={<Contactpage/>}/>
+        <Route path="/signup" element={<SignUppage/>}/>
+      </Routes>
+    </div>
+  );
+};
 
 export default App;
